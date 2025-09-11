@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <div id="posts-container"></div>
+
+    <script>
+        // Use an async function to use the 'await' keyword
+        async function fetchAndDisplayPosts() {
+            try {
+                // Fetch the data from the posts.json file
+                const response = await fetch('/data/posts.json');
+                
+                // Check if the request was successful
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                
+                // Parse the JSON data from the response
+                const posts = await response.json();
+                
+                const container = document.getElementById('posts-container');
+                
+                // Loop through each post and create HTML to display it
+                posts.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.innerHTML = `
+                        <h2>${post.title}</h2>
+                        <p>${post.content}</p>
+                    `;
+                    container.appendChild(postElement);
+                });
+
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        // Call the function when the page loads
+        fetchAndDisplayPosts();
+    </script>
+</body>
+</html>
