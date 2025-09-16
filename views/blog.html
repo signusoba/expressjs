@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Blog Posts</h1>
-    <div id="posts-container"></div>
+    <header class="navbar">
+        <div class="logo">Sobalicious</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+        <button class="request-btn">Request A Proposal</button>
+    </header>
+
+    <main class="content-section">
+        <div class="page-container">
+            <h1>Blog Posts</h1>
+            <div id="posts-container"></div>
+        </div>
+    </main>
 
     <script>
         // Use an async function to use the 'await' keyword
