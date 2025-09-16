@@ -1,4 +1,14 @@
 [
-    {"title": "First Post", "content": "This is my first blog post."},
-    {"title": "Second Post", "content": "This is another blog post"}
+  {
+    "title": "First Blog Post",
+    "content": "This is the content of the first blog post."
+  },
+  {
+    "title": "Second Blog Post",
+    "content": "This is the content of the second blog post. It's a great day for blogging!"
+  },
+  {
+    "title": "Third Blog Post",
+    "content": "Another day, another blog post. Hope you find this content useful and informative."
+  }
 ]
